@@ -9,6 +9,7 @@
 <meta name="generator" content="pandoc" />
 
 
+<meta name="date" content="2015-09-17" />
 
 <title>Deploying to shinyapps.io</title>
 
@@ -51,32 +52,23 @@ code > span.er { color: #ff0000; font-weight: bold; }
 
 <div id="header">
 <h1 class="title">Deploying to shinyapps.io</h1>
+<h4 class="date"><em>09/17/2015</em></h4>
 </div>
 
-<div id="TOC">
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#step-1-shinyapps-account">Step 1: ShinyApps account</a></li>
-<li><a href="#step-2-use-deploy_shinystan-to-deploy-your-app-to-shinyapps.io">Step 2: Use <code>deploy_shinystan</code> to deploy your app to shinyapps.io</a></li>
-</ul>
-</div>
 
-<div id="about" class="section level3">
-<h3>About</h3>
 <p>Create a ShinyStan app unique to your model and host it online with RStudio’s ShinyApps service (shinyapps.io). Each app you deploy will have a unique url.</p>
 <p><em>Note: R users who don’t use RStudio’s IDE can still deploy ShinyStan apps to shinyapps.io.</em></p>
-</div>
-<div id="step-1-shinyapps-account" class="section level3">
-<h3>Step 1: ShinyApps account</h3>
+<div id="step-1-shinyapps-account" class="section level2">
+<h2>Step 1: ShinyApps account</h2>
 <p><strong>Signup</strong></p>
 <p>To deploy your app to RStudio’s shinyapps.io you will need a ShinyApps account. If you don’t already have one you can sign up at <a href="http://www.shinyapps.io/" class="uri">http://www.shinyapps.io/</a>.</p>
 <p>The only limit to the number of different ShinyStan apps you can deploy is the limit set by RStudio for the <a href="https://www.shinyapps.io/#pricing">type of ShinyApps account</a> you sign up for.</p>
 <p><strong>Setup</strong></p>
-<p>After signing up for a ShinyApps account, follow the instructions for setting up your account on your local system using the <code>setAccountInfo</code> function in the <code>shinyapps</code> package. If you don’t have the <code>shinyapps</code> package installed you can install it by running</p>
-<pre class="sourceCode r"><code class="sourceCode r">devtools::<span class="kw">install_github</span>(<span class="st">&quot;rstudio/shinyapps&quot;</span>)</code></pre>
+<p>After signing up for a ShinyApps account, follow the instructions for setting up your account on your local system using the <code>setAccountInfo</code> function in the <code>rsconnect</code> package. If you don’t have the <code>rsconnect</code> package installed you can install it by running</p>
+<pre class="sourceCode r"><code class="sourceCode r">devtools::<span class="kw">install_github</span>(<span class="st">&quot;rstudio/rsconnect&quot;</span>)</code></pre>
 </div>
-<div id="step-2-use-deploy_shinystan-to-deploy-your-app-to-shinyapps.io" class="section level3">
-<h3>Step 2: Use <code>deploy_shinystan</code> to deploy your app to shinyapps.io</h3>
+<div id="step-2-use-deploy_shinystan-to-deploy-your-app-to-shinyapps.io" class="section level2">
+<h2>Step 2: Use <code>deploy_shinystan</code> to deploy your app to shinyapps.io</h2>
 <p>The <code>deploy_shinystan</code> function will deploy a ShinyStan app unique to your model to RStudio’s ShinyApps service.</p>
 <p>For the example below assume that</p>
 <ul>

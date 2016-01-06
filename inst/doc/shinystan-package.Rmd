@@ -1,20 +1,21 @@
 ---
-title: "Basics"
+title: 'Getting Started'
+date: "09/17/2015"
 output: 
   rmarkdown::html_vignette:
-    toc: true    
+    toc: true
 vignette: >
-  %\VignetteIndexEntry{Basics}
+  %\VignetteIndexEntry{Getting Started}
   %\VignetteEngine{knitr::rmarkdown}
-  %\usepackage[utf8]{inputenc}
+  %\VignetteEncoding{UTF-8}
 ---
 
 # Using the ShinyStan app with different types of objects
 
-## `stanfit` objects
+## stanfit objects
 
 If `my_stanfit` is a stanfit object (the result of fitting a model with
-[**rstan**](http://mc-stan.org)), then to launch the ShinyStan app simply use
+[**rstan**](http://mc-stan.org/)), then to launch the ShinyStan app simply use
 
 ```r
 library(shinystan)
@@ -32,7 +33,7 @@ then ShinyStan will launch but no shinystan object will be saved upon quitting
 the app. 
 
 
-## `mcmc.list` objects
+## mcmc.list objects
 
 If you have an `mcmc.list` object called `my_mcmc` then you can use the 
 `as.shinystan` function to convert `my_mcmc` into a shinystan object that 

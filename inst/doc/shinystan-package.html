@@ -9,8 +9,9 @@
 <meta name="generator" content="pandoc" />
 
 
+<meta name="date" content="2015-09-17" />
 
-<title>Basics</title>
+<title>Getting Started</title>
 
 
 
@@ -50,14 +51,15 @@ code > span.er { color: #ff0000; font-weight: bold; }
 
 
 <div id="header">
-<h1 class="title">Basics</h1>
+<h1 class="title">Getting Started</h1>
+<h4 class="date"><em>09/17/2015</em></h4>
 </div>
 
 <div id="TOC">
 <ul>
 <li><a href="#using-the-shinystan-app-with-different-types-of-objects">Using the ShinyStan app with different types of objects</a><ul>
-<li><a href="#stanfit-objects"><code>stanfit</code> objects</a></li>
-<li><a href="#mcmc.list-objects"><code>mcmc.list</code> objects</a></li>
+<li><a href="#stanfit-objects">stanfit objects</a></li>
+<li><a href="#mcmc.list-objects">mcmc.list objects</a></li>
 <li><a href="#other-types-of-objects">Other types of objects</a><ul>
 <li><a href="#d-array">3-D array</a></li>
 <li><a href="#list-of-matrices">List of matrices</a></li>
@@ -74,8 +76,8 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <div id="using-the-shinystan-app-with-different-types-of-objects" class="section level1">
 <h1>Using the ShinyStan app with different types of objects</h1>
 <div id="stanfit-objects" class="section level2">
-<h2><code>stanfit</code> objects</h2>
-<p>If <code>my_stanfit</code> is a stanfit object (the result of fitting a model with <a href="http://mc-stan.org"><strong>rstan</strong></a>), then to launch the ShinyStan app simply use</p>
+<h2>stanfit objects</h2>
+<p>If <code>my_stanfit</code> is a stanfit object (the result of fitting a model with <a href="http://mc-stan.org/"><strong>rstan</strong></a>), then to launch the ShinyStan app simply use</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(shinystan)
 my_sso &lt;-<span class="st"> </span><span class="kw">launch_shinystan</span>(my_stanfit)</code></pre>
 <p>and ShinyStan will launch. Here <code>my_sso</code> is the name you want to use for the shinystan object that will be returned. If you simply run</p>
@@ -83,7 +85,7 @@ my_sso &lt;-<span class="st"> </span><span class="kw">launch_shinystan</span>(my
 <p>then ShinyStan will launch but no shinystan object will be saved upon quitting the app.</p>
 </div>
 <div id="mcmc.list-objects" class="section level2">
-<h2><code>mcmc.list</code> objects</h2>
+<h2>mcmc.list objects</h2>
 <p>If you have an <code>mcmc.list</code> object called <code>my_mcmc</code> then you can use the <code>as.shinystan</code> function to convert <code>my_mcmc</code> into a shinystan object that can then be used with <code>launch_shinystan</code>:</p>
 <pre class="sourceCode r"><code class="sourceCode r">my_sso &lt;-<span class="st"> </span><span class="kw">launch_shinystan</span>(<span class="kw">as.shinystan</span>(my_mcmc, <span class="dt">model_name =</span> <span class="st">&quot;my_model&quot;</span>))</code></pre>
 <p>If, for example, the first 100 iterations in each chain in <code>my_mcmc</code> are burnin/warmup iterations, you should add the <code>burnin</code> argument when you call <code>as.shinystan</code>:</p>
