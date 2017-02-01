@@ -104,9 +104,9 @@ my_sso &lt;-<span class="st"> </span><span class="kw">launch_shinystan</span>(my
 <h2>mcmc.list objects</h2>
 <p>If you have an <code>mcmc.list</code> object called <code>my_mcmc</code> then you can use the <code>as.shinystan</code> function to convert <code>my_mcmc</code> into a shinystan object that can then be used with <code>launch_shinystan</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my_sso &lt;-<span class="st"> </span><span class="kw">launch_shinystan</span>(<span class="kw">as.shinystan</span>(my_mcmc, <span class="dt">model_name =</span> <span class="st">&quot;my_model&quot;</span>))</code></pre></div>
-<p>If, for example, the first 100 iterations in each chain in <code>my_mcmc</code> are burnin/warmup iterations, you should add the <code>burnin</code> argument when you call <code>as.shinystan</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my_sso &lt;-<span class="st"> </span><span class="kw">launch_shinystan</span>(<span class="kw">as.shinystan</span>(my_mcmc, <span class="dt">model_name =</span> <span class="st">&quot;my_model&quot;</span>, <span class="dt">burnin =</span> <span class="dv">100</span>))</code></pre></div>
-<p>However, you should only use the <code>burnin</code> argument if the burnin iterations have been saved and included in <code>my_mcmc</code>.</p>
+<p>If, for example, the first 100 iterations in each chain in <code>my_mcmc</code> are warmup iterations, you should add the <code>warmup</code> argument when you call <code>as.shinystan</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my_sso &lt;-<span class="st"> </span><span class="kw">launch_shinystan</span>(<span class="kw">as.shinystan</span>(my_mcmc, <span class="dt">model_name =</span> <span class="st">&quot;my_model&quot;</span>, <span class="dt">warmup =</span> <span class="dv">100</span>))</code></pre></div>
+<p>However, you should only use the <code>warmup</code> argument if the warmup iterations have been saved and included in <code>my_mcmc</code>.</p>
 </div>
 <div id="other-types-of-objects" class="section level2">
 <h2>Other types of objects</h2>
