@@ -30,7 +30,7 @@ deployment is successful.}
 }
 \description{
 Requires a (free or paid) 'ShinyApps' account. Visit
-\url{http://www.shinyapps.io/} to sign up.
+\url{https://www.shinyapps.io/} to sign up.
 }
 \details{
 In \code{...}, the arguments \code{ppcheck_data} and
@@ -45,7 +45,7 @@ In \code{...}, the arguments \code{ppcheck_data} and
 }
 \examples{
 \dontrun{
-# For this example assume sso is the name of the \\code{shinystan} object for
+# For this example assume sso is the name of the \code{shinystan} object for
 # the model you want to use. Assume also that you want to name your app
 # 'my-model' and that your shinyapps.io username is 'username'.
 
@@ -62,7 +62,7 @@ deploy_shinystan(sso, appName = "my-model")
 The example in the \emph{Deploying to shinyapps.io} vignette that
   comes with this package.
 
-  \url{http://www.shinyapps.io/} to sign up for a free or paid 'ShinyApps'
+  \url{https://www.shinyapps.io/} to sign up for a free or paid 'ShinyApps'
   account and for details on how to configure your account on your local
-  system using the \pkg{\link[rsconnect]{rsconnect}} package from 'RStudio'.
+  system using the \pkg{rsconnect} package from 'RStudio'.
 }

@@ -88,6 +88,7 @@ launch_shinystan.default <-
            rstudio = getOption("shinystan.rstudio")) {
     if (!is.shinystan(object) && 
         !is.stanfit(object) && 
+        !inherits(object, "CmdStanMCMC") &&
         !is.stanreg(object)) {
       stop("object not compatible with 'launch_shinystan'. ",
            "Try converting to a shinystan object first using 'as.shinystan'.")
@@ -121,7 +122,7 @@ launch_shinystan.shinystan <-
 #'   \describe{
 #'   \item{\code{eight_schools}}{Hierarchical meta-analysis model. See 
 #'    \emph{Meta Analysis} chapter of the 'Stan' manual 
-#'    \url{http://mc-stan.org/users/documentation/}.}
+#'    \url{https://mc-stan.org/users/documentation/}.}
 #'   }
 #' @return An S4 shinystan object.
 #'   
@@ -151,7 +152,7 @@ launch_shinystan_demo <- function(demo_name = "eight_schools",
 # @param ... passed to shiny::runApp
 launch <- function(sso, rstudio = FALSE, ...) {
   launch.browser <- if (!rstudio) 
-    TRUE else getOption("shiny.launch.browser", interactive())
+    getOption("shiny.launch.browser", TRUE) else getOption("shiny.launch.browser", interactive())
   
   .sso_env$.SHINYSTAN_OBJECT <- sso  # see zzz.R for .sso_env
   on.exit(.sso_env$.SHINYSTAN_OBJECT <- NULL, add = TRUE)

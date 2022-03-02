@@ -5,8 +5,11 @@
 \alias{eight_schools}
 \title{'ShinyStan' demo}
 \usage{
-launch_shinystan_demo(demo_name = "eight_schools",
-  rstudio = getOption("shinystan.rstudio"), ...)
+launch_shinystan_demo(
+  demo_name = "eight_schools",
+  rstudio = getOption("shinystan.rstudio"),
+  ...
+)
 }
 \arguments{
 \item{demo_name}{The name of the demo. Currently \code{"eight_schools"} is 
@@ -14,7 +17,7 @@ the only option, but additional demos may be available in future releases.
 \describe{
 \item{\code{eight_schools}}{Hierarchical meta-analysis model. See 
  \emph{Meta Analysis} chapter of the 'Stan' manual 
- \url{http://mc-stan.org/users/documentation/}.}
+ \url{https://mc-stan.org/users/documentation/}.}
 }}
 
 \item{rstudio}{Only relevant for 'RStudio' users. The default (\code{FALSE})

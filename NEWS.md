@@ -1,6 +1,13 @@
+# shinystan 2.6.0
+
+* Initial support for CmdStanMCMC objects from CmdStanR
+
+* Moved rsconnect package from Imports to Suggests as requested by CRAN
+
+
 # shinystan 2.5.0
 
-* New website with online documentation: http://mc-stan.org/shinystan
+* New website with online documentation: https://mc-stan.org/shinystan
 
 * Fixed problem with extracting info from fits reconstructed from CSV files (#128,#158), thanks to @martinmodrak
 
